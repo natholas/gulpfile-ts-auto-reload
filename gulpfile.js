@@ -49,7 +49,7 @@ gulp.task('browserify', () => {
     cache: {},
     packageCache: {}
   })
-    .plugin(tsify)
+    .plugin(tsify, {target: 'es6'})
     .transform('babelify', {
       presets: ['es2015'],
       extensions: ['.ts']
